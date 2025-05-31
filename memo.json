@@ -1,0 +1,104 @@
+{
+    "Freecompany_Profile":{
+        "Name":"A Cap of Tea",
+        "World":"Shinryu",
+        "Data_Center":"Meteor",
+        "Main_Language":"Japanese",
+        "Formed": "2019-10-05-JST",
+        "Active Members":8,
+        "Rank":30,
+        "Reputation":"双蛇党 盟友",
+        "Estate_Address":"エンピレアム第25区18番地 [Medium]"
+        },
+
+    "Member_info":[
+        {
+        "first_name":"Roimy",
+        "last_name":"Zomsa",
+        "rank":"Master",
+        "race":"Hyuran",
+        "main_job":"Bard",
+        "login_time":"20:00-JST",
+        "logout_time":"00:00-JST"
+    
+        },
+
+        {
+        "first_name":"Rikka",
+        "last_name":"Lopez",
+        "rank":"Sub Master",
+        "race":"Miqo'te",
+        "main_job":"Paladin",
+        "login_time":"21:00-JST",
+        "logout_time":"00:00-JST"
+    
+        },
+
+        {
+        "first_name":"Shino",
+        "last_name":"Alice",
+        "rank":"Crafter and Gatherer",
+        "race":"Lalafell",
+        "main_job":"Sage",
+        "login_time":"21:00-JST",
+        "logout_time":"00:00-JST"
+        
+        },
+        
+        {
+        "first_name":"Amytheia",
+        "last_name":"Evergarden",
+        "rank":"Member",
+        "race":"Miqo'te",
+        "main_job":null,
+        "login_time":null,
+        "logout_time":null
+        
+        },
+
+        {
+        "first_name":"Haru",
+        "last_name":"Tiara",
+        "rank":"inactive",
+        "race":"Aura",
+        "main_job":"Summoner",
+        "login_time":null,
+        "logout_time":null
+        
+        },
+
+        {
+        "first_name":"Joshua",
+        "last_name":"Kyanite",
+        "rank":"Member",
+        "race":"Lalafell",
+        "main_job":"Summoner",
+        "login_time":null,
+        "logout_time":null
+        
+        },
+
+        {
+        "first_name":"Sokke",
+        "last_name":"Nai",
+        "rank":"Member",
+        "race":"Aura",
+        "main_job":"Red Mage",
+        "login_time":null,
+        "logout_time":null
+    
+        },
+
+        {
+        "first_name":"Chrispbacon",
+        "last_name":"Imahogg",
+        "rank":"inactive",
+        "race":"Miqo'te",
+        "main_job":null,
+        "login_time":null,
+        "logout_time":null
+    
+        }
+    ]
+}
+
