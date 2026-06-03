@@ -1,0 +1,48 @@
+<!-- ============================================================
+     _nav.html
+     役割: 全ページ共通ナビゲーションのスニペット
+           各HTMLファイルにコピー貼り付けして使う
+           ★ ページを追加した場合はここと全HTMLファイルを更新
+     data-page: 現在ページのハイライトに使う（main.jsが参照）
+============================================================ -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid px-3">
+
+    <!-- サイトロゴ -->
+    <a class="navbar-brand" href="../index.html">⚔ <span>FC</span> Portal</a>
+
+    <!-- ナビリンク（横スクロール対応） -->
+    <div class="navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-page="index.html" href="../index.html">🏠 ホーム</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-page="members.html" href="members.html">👥 メンバー</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-page="rules.html" href="rules.html">📜 ルール</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-page="discord.html" href="discord.html">💬 Discord</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-page="links.html" href="links.html">🔗 リンク集</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-page="events.html" href="events.html">📅 イベント</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-page="stream.html" href="stream.html">🎮 配信</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-page="memo.html" href="memo.html">📖 攻略メモ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-page="faq.html" href="faq.html">❓ FAQ</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

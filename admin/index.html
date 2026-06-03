@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Portal — 管理画面</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand" href="../index.html">⚔ <span>FC</span> Portal</a>
+    <span style="color:var(--accent);font-size:0.8rem;padding:14px 8px;border-left:1px solid var(--border);margin-left:8px">🛠 管理画面</span>
+    <div class="ms-auto">
+      <a href="../index.html" class="btn btn-outline-secondary btn-sm">← サイトに戻る</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page-wrap">
+  <div class="section-heading"><h2>🛠 JSON カード生成ツール</h2></div>
+
+  <p class="text-secondary mb-4" style="font-size:0.875rem">
+    URLを入力するとOGP情報（画像・タイトル・説明）を自動取得します。<br>
+    内容を確認・編集してからJSONをダウンロードし、<code>data/</code>フォルダに保存→GitHubにコミットしてください。
+  </p>
+
+  <!-- URL入力・OGP取得 -->
+  <div class="admin-section">
+    <div class="admin-section-title">URLからOGP取得</div>
+    <div class="row g-3 align-items-end">
+      <div class="col-md-3">
+        <label class="form-label">対象ページ</label>
+        <select class="form-select" id="json-type">
+          <option value="links">🔗 リンク集（links.json）</option>
+          <option value="memo">📖 攻略メモ（memo.json）</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">URL <span class="text-secondary" style="font-size:0.75rem">（OGP自動取得）</span></label>
+        <input type="url" class="form-control" id="input-url" placeholder="https://example.com">
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-primary w-100" onclick="fetchOGP()">
+          <span id="ogp-btn-text">🔍 OGP取得</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- カード情報入力 -->
+  <div class="admin-section">
+    <div class="admin-section-title">カード情報</div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">タイトル <span class="required">*</span></label>
+        <input type="text" class="form-control" id="input-title" placeholder="サイトのタイトル">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">カテゴリ <span class="text-secondary" style="font-size:0.75rem">（任意）</span></label>
+        <input type="text" class="form-control" id="input-category" placeholder="例: 公式・攻略">
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">絵文字 <span class="text-secondary" style="font-size:0.75rem">（画像なし時）</span></label>
+        <input type="text" class="form-control" id="input-emoji" placeholder="🔗">
+      </div>
+      <div class="col-12">
+        <label class="form-label">説明</label>
+        <textarea class="form-control" id="input-description" rows="3" placeholder="サイトの説明文"></textarea>
+      </div>
+      <div class="col-md-9">
+        <label class="form-label">画像URL</label>
+        <input type="url" class="form-control" id="input-image" placeholder="https://example.com/image.jpg">
+      </div>
+      <div class="col-md-3 d-flex align-items-end">
+        <div class="img-preview-wrap" id="img-preview-wrap">
+          <span class="text-secondary" style="font-size:0.75rem">プレビュー</span>
+        </div>
+      </div>
+      <div class="col-12">
+        <label class="form-label">タグ <span class="text-secondary" style="font-size:0.75rem">（カンマ区切り）</span></label>
+        <input type="text" class="form-control" id="input-tags" placeholder="攻略, 公式, ツール">
+      </div>
+      <div class="col-12">
+        <label class="form-label">リンク先URL <span class="required">*</span></label>
+        <input type="url" class="form-control" id="input-link-url" placeholder="https://example.com">
+      </div>
+    </div>
+
+    <!-- カードプレビュー -->
+    <div class="mt-4">
+      <label class="form-label">カードプレビュー</label>
+      <div style="max-width:240px">
+        <div id="card-preview" class="json-card">
+          <div class="json-card-img-ph">🔗</div>
+          <div class="json-card-body">
+            <div class="json-card-title text-secondary">タイトルを入力してください</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3 d-flex gap-2">
+      <button class="btn btn-primary" onclick="addToList()">✚ リストに追加</button>
+      <button class="btn btn-outline-secondary" onclick="clearForm()">クリア</button>
+    </div>
+  </div>
+
+  <!-- 追加済みリスト -->
+  <div class="admin-section">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <div class="admin-section-title mb-0">追加済みリスト <span id="list-count" class="text-secondary" style="font-size:0.85rem">（0件）</span></div>
+      <label class="btn btn-outline-secondary btn-sm mb-0" style="cursor:pointer">
+        📂 JSONを読み込む
+        <input type="file" accept=".json" id="json-file-input" style="display:none" onchange="loadExistingJSON(this)">
+      </label>
+    </div>
+    <div id="card-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col-12 text-center text-secondary py-4" id="list-empty">
+        <p style="font-size:0.875rem">まだカードが追加されていません</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JSON出力 -->
+  <div class="admin-section">
+    <div class="admin-section-title">📥 JSONダウンロード</div>
+    <label class="form-label">JSONプレビュー</label>
+    <textarea class="form-control font-monospace mb-3" id="json-preview" rows="10" readonly
+      placeholder="カードを追加するとここにJSONが表示されます"></textarea>
+    <div class="d-flex gap-2 flex-wrap">
+      <button class="btn btn-primary" onclick="downloadJSON()">💾 JSONをダウンロード</button>
+      <button class="btn btn-outline-secondary" onclick="copyJSON()">📋 クリップボードにコピー</button>
+    </div>
+    <div class="mt-3 p-3 rounded" style="background:rgba(18,102,241,0.05);border:1px solid var(--border)">
+      <p style="font-size:0.8rem;color:var(--text-sub);margin:0">
+        💡 ダウンロードしたJSONを <code>data/links.json</code> または <code>data/memo.json</code> として保存し、GitHubにコミットするとサイトに反映されます。
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<footer><p>© 2025 FC Portal — 管理画面</p></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+<script src="../script/main.js"></script>
+<script src="script/admin.js"></script>
+</body>
+</html>

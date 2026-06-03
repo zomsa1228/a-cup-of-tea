@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Portal — イベント</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand" href="../index.html">⚔ <span>FC</span> Portal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navMenu" aria-controls="navMenu"
+      aria-expanded="false" aria-label="メニューを開く">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" data-page="index.html"   href="../index.html">🏠 ホーム</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="members.html" href="members.html">👥 メンバー</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="rules.html"   href="rules.html">📜 ルール</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="discord.html" href="discord.html">💬 Discord</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="links.html"   href="links.html">🔗 リンク集</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="events.html"  href="events.html">📅 イベント</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="stream.html"  href="stream.html">🎮 配信</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="memo.html"    href="memo.html">📖 攻略メモ</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="faq.html"     href="faq.html">❓ FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="page-wrap">
+  <div class="section-heading"><h2>📅 イベント告知</h2></div>
+
+  <!-- Googleカレンダー大表示 ★ CONFIG.GOOGLE_CAL_SRC を設定すると自動表示 -->
+  <div class="cal-full mb-4">
+    <div id="events-cal-embed">
+      <div class="cal-ph">
+        <span style="font-size:2.5rem">📅</span>
+        <strong style="color:var(--accent)">Googleカレンダーを埋め込む</strong>
+        <span style="font-size:0.8rem;color:var(--text-mute);text-align:center">
+          Googleカレンダー → 設定 → カレンダーを統合 → 埋め込みURLを取得<br>
+          <code>script/main.js</code> の <code>GOOGLE_CAL_SRC</code> に設定してください
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ★★★ イベント内容を編集してください ★★★ -->
+  <div class="section-heading"><h2>直近のイベント</h2></div>
+
+  <div class="event-item">
+    <div class="event-date-box"><div class="event-date-m">MAY</div><div class="event-date-d">03</div></div>
+    <div>
+      <div class="event-title">極コンテンツ 練習会</div>
+      <div class="event-meta">🕘 21:00〜23:00 ・ 参加人数: 8名</div>
+      <div class="event-desc">初参加歓迎！装備条件: IL600以上。詳細はDiscordの#イベントチャンネルをご確認ください。</div>
+    </div>
+  </div>
+
+  <div class="event-item">
+    <div class="event-date-box"><div class="event-date-m">MAY</div><div class="event-date-d">10</div></div>
+    <div>
+      <div class="event-title">FC 週次ギャザクラ会</div>
+      <div class="event-meta">🕘 20:00〜22:00 ・ 参加自由</div>
+      <div class="event-desc">みんなで素材集め＆クラフト。新コンテンツの準備に！</div>
+    </div>
+  </div>
+
+  <div class="event-item">
+    <div class="event-date-box"><div class="event-date-m">MAY</div><div class="event-date-d">17</div></div>
+    <div>
+      <div class="event-title">スクリーンショット大会 🎨</div>
+      <div class="event-meta">🕘 終日受付</div>
+      <div class="event-desc">テーマ「エオルゼアの夕暮れ」。優秀作品はサイトトップに掲載します。</div>
+    </div>
+  </div>
+
+  <div class="event-item">
+    <div class="event-date-box"><div class="event-date-m">MAY</div><div class="event-date-d">24</div></div>
+    <div>
+      <div class="event-title">新規メンバー歓迎コンテンツ</div>
+      <div class="event-meta">🕘 20:30〜22:00 ・ 定員12名</div>
+      <div class="event-desc">最近加入したメンバー優先で低難度コンテンツを周回します。ベテランも大歓迎！</div>
+    </div>
+  </div>
+
+</main>
+<footer>
+  <p>© 2025 FC Portal — Final Fantasy XIV Free Company Site</p>
+  <p>FINAL FANTASY XIV © 2010-2025 SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+<script src="../script/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    injectEmbed('events-cal-embed',
+      CONFIG.GOOGLE_CAL_SRC
+        ? CONFIG.GOOGLE_CAL_SRC + '&showTitle=0&showNav=1&showPrint=0&mode=MONTH&height=520'
+        : '',
+      520, document.getElementById('events-cal-embed').innerHTML);
+  });
+</script>
+</body>
+</html>

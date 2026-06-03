@@ -1,0 +1,56 @@
+[
+  {
+    "title": "FFXIV 公式サイト",
+    "description": "ファイナルファンタジーXIV 公式ホームページ。最新情報・パッチノートはこちら。",
+    "image": "",
+    "url": "https://jp.finalfantasyxiv.com/",
+    "emoji": "🏰",
+    "category": "公式・ゲーム情報",
+    "tags": ["公式", "FFXIV"]
+  },
+  {
+    "title": "Lodestone",
+    "description": "キャラクター情報・フリーカンパニー情報・トピックスをチェック。",
+    "image": "",
+    "url": "https://jp.finalfantasyxiv.com/lodestone/",
+    "emoji": "🗺️",
+    "category": "公式・ゲーム情報",
+    "tags": ["公式", "Lodestone"]
+  },
+  {
+    "title": "Universalis",
+    "description": "マーケットボードの価格をワールド・データセンター横断で確認できるツール。",
+    "image": "",
+    "url": "https://universalis.app/",
+    "emoji": "💰",
+    "category": "攻略・ツール",
+    "tags": ["マーケット", "価格確認"]
+  },
+  {
+    "title": "FFXIV Teamcraft",
+    "description": "クラフト・ギャザラー向けの強力な支援ツール。素材リストや回転数計算も。",
+    "image": "",
+    "url": "https://ffxivteamcraft.com/",
+    "emoji": "🔨",
+    "category": "攻略・ツール",
+    "tags": ["クラフト", "ギャザラー"]
+  },
+  {
+    "title": "Etro.gg",
+    "description": "ギアセット・装備シミュレーター。マテリア構成やBiSの共有に。",
+    "image": "",
+    "url": "https://etro.gg/",
+    "emoji": "💎",
+    "category": "攻略・ツール",
+    "tags": ["装備", "BiS", "マテリア"]
+  },
+  {
+    "title": "XIV Analysis",
+    "description": "FFLogsのデータを解析してジョブのパフォーマンス改善点を提案してくれるツール。",
+    "image": "",
+    "url": "https://xivanalysis.com/",
+    "emoji": "📊",
+    "category": "攻略・ツール",
+    "tags": ["ログ解析", "DPS"]
+  }
+]

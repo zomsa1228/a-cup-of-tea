@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Portal — Discord案内</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand" href="../index.html">⚔ <span>FC</span> Portal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navMenu" aria-controls="navMenu"
+      aria-expanded="false" aria-label="メニューを開く">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" data-page="index.html"   href="../index.html">🏠 ホーム</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="members.html" href="members.html">👥 メンバー</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="rules.html"   href="rules.html">📜 ルール</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="discord.html" href="discord.html">💬 Discord</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="links.html"   href="links.html">🔗 リンク集</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="events.html"  href="events.html">📅 イベント</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="stream.html"  href="stream.html">🎮 配信</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="memo.html"    href="memo.html">📖 攻略メモ</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="faq.html"     href="faq.html">❓ FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="page-wrap">
+  <div class="section-heading"><h2>💬 Discord 案内</h2></div>
+
+  <!-- ★★★ Discord情報を編集してください ★★★ -->
+  <div class="discord-hero d-flex align-items-center gap-4 flex-wrap mb-4">
+    <div style="font-size:3.5rem;flex-shrink:0">🎮</div>
+    <div>
+      <h2>FC Discord サーバー</h2>
+      <p>当FCではDiscordを主なコミュニケーションツールとして使用しています。<br>
+      ゲーム外でも気軽につながれます。加入時にはご参加をお願いしています。</p>
+      <a href="#" class="btn-discord discord-invite-link">Discord に参加する →</a>
+    </div>
+  </div>
+
+  <div class="section-heading"><h2>なぜDiscordを使うの？</h2></div>
+  <!-- ★★★ 理由カードを編集してください ★★★ -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4">
+    <div class="col"><div class="discord-reason"><span class="discord-reason-icon">📣</span><div class="discord-reason-title">リアルタイム連絡</div><p class="discord-reason-text">イベント告知・緊急連絡を素早くメンバー全員に届けられます。</p></div></div>
+    <div class="col"><div class="discord-reason"><span class="discord-reason-icon">🎙️</span><div class="discord-reason-title">ボイスチャット</div><p class="discord-reason-text">コンテンツ中のボイスチャットで連携がスムーズになります。</p></div></div>
+    <div class="col"><div class="discord-reason"><span class="discord-reason-icon">📋</span><div class="discord-reason-title">情報共有</div><p class="discord-reason-text">攻略情報・SS・雑談など話題別チャンネルで整理できます。</p></div></div>
+    <div class="col"><div class="discord-reason"><span class="discord-reason-icon">🌙</span><div class="discord-reason-title">ゲーム外でもつながれる</div><p class="discord-reason-text">ログインしていない時でもFC仲間と交流できます。</p></div></div>
+    <div class="col"><div class="discord-reason"><span class="discord-reason-icon">🔔</span><div class="discord-reason-title">通知管理</div><p class="discord-reason-text">必要なチャンネルだけ通知ON、不要なものはOFFにできます。</p></div></div>
+    <div class="col"><div class="discord-reason"><span class="discord-reason-icon">🤖</span><div class="discord-reason-title">Botで便利に</div><p class="discord-reason-text">FFXIV関連BotでジョブやマーケットBoardの情報も確認できます。</p></div></div>
+  </div>
+
+  <hr class="divider-accent">
+
+  <div class="section-heading"><h2>Discordウィジェット</h2></div>
+  <!-- ★ CONFIG.DISCORD_SERVER_ID を設定すると自動表示 -->
+  <div class="widget-wrap">
+    <div id="discord-widget-embed">
+      <div class="widget-ph">
+        <span style="font-size:2.5rem">💬</span>
+        <strong style="color:#6e8efb">Discordウィジェットを埋め込む</strong>
+        <span style="font-size:0.8rem;color:var(--text-mute);text-align:center">
+          Discord → サーバー設定 → ウィジェット → 有効化 → サーバーID取得<br>
+          <code>script/main.js</code> の <code>DISCORD_SERVER_ID</code> に設定
+        </span>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <p>© 2025 FC Portal — Final Fantasy XIV Free Company Site</p>
+  <p>FINAL FANTASY XIV © 2010-2025 SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+<script src="../script/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    injectEmbed('discord-widget-embed',
+      CONFIG.DISCORD_SERVER_ID ? `https://discord.com/widget?id=${CONFIG.DISCORD_SERVER_ID}&theme=dark` : '',
+      500, document.getElementById('discord-widget-embed').innerHTML);
+  });
+</script>
+</body>
+</html>

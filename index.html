@@ -1,416 +1,276 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>FC A cup of tea</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <style>
-    /* Height for devices larger than 576px */
-    @media (min-width: 992px) {
-      #intro {
-        margin-top: -58.59px;
-      }
-    }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FC Portal — ホーム</title>
+  <!-- MDB CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
 
-    .navbar .nav-link {
-      color: #fff !important;
-    }
-  </style>
-  <body>
-      
-        <!-- With Hearts Aligned -lyrics- From FFXIV ENDWALKER -->
-        <!-- 想いが動かす力 歌詞 FF14 暁月のフィナーレより-->
-        <!--  -->
-        <!--Our song of hope, she dances on the wind higher, oh higher -->
-        <!-- 希望の唄は風に乗り、天高くへ舞い上がる -->
-        <!--  -->
-        <!--E'er our vows endure, and remain forever strong -->
-        <!-- 約束はいつまでも消えず、確かに残り続けるだろう -->
-        <!--  -->
-        <!--Standing tall in the dark do we carry on -->
-        <!-- 困難の中でも、胸を張って生きてゆけ -->
-        <!--  -->
-        <!--On wings of hope, you rise up through the night higher, oh higher -->
-        <!-- 希望の翼に乗り、あなたは夜空へ舞い上がる -->
-        <!--  -->
-        <!--Carrying our song, cradled fast within your arms -->
-        <!-- その腕に抱き、私たちの唄も運んでいって -->
-        <!--  -->
-        <!--That its chorus might ring for all -->
-        <!-- すべてに響き渡るように -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand" href="index.html">⚔ <span>FC</span> Portal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navMenu" aria-controls="navMenu"
+      aria-expanded="false" aria-label="メニューを開く">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" data-page="index.html"   href="index.html">🏠 ホーム</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="members.html" href="HTML/members.html">👥 メンバー</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="rules.html"   href="HTML/rules.html">📜 ルール</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="discord.html" href="HTML/discord.html">💬 Discord</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="links.html"   href="HTML/links.html">🔗 リンク集</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="events.html"  href="HTML/events.html">📅 イベント</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="stream.html"  href="HTML/stream.html">🎮 配信</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="memo.html"    href="HTML/memo.html">📖 攻略メモ</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="faq.html"     href="HTML/faq.html">❓ FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
-          <strong>MDB</strong>
-        </a>
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarExample01">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#intro">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
-                target="_blank">Learn Bootstrap 5</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Download MDB UI KIT</a>
-            </li>
-          </ul>
+<main class="page-wrap">
 
-          <ul class="navbar-nav d-flex flex-row">
-            <!-- Icons -->
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
-                target="_blank">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
+  <!-- ============================================================
+       1. FCヒーローバナー（Lodestoneから自動取得）
+          ★ クレストは全レイヤーを重ねて表示（FF14準拠）
+          ★ 取得中はここにプログレスバーが表示される
+  ============================================================ -->
+  <div id="home-hero-wrap" class="mb-4">
+    <!-- loadFCTop() によってプログレスバー→FC情報の順で描画される -->
+  </div>
 
-    <!-- Background image -->
-    <div id="intro" class="bg-image vh-100 shadow-1-strong">
-      <video style="min-width: 100%; min-height: 100%;" playsinline autoplay muted loop>
-        <source class="h-100" src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
-      </video>
-      <div class="mask"     style="
-      background: linear-gradient(
-        45deg,
-        rgba(29, 236, 197, 0.7),
-        rgba(91, 14, 214, 0.7) 100%
-      );
-    ">
-        <div class="container d-flex align-items-center justify-content-center text-center h-100">
-          <div class="text-white">
-            <h1 class="mb-3">Welcome to "A Cup of Tea"</h1>
-            <h5 class="mb-4">自由を愛するフリーカンパニー</h5>
-            <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="#"
-              role="button"
-              rel="nofollow"
-              target="_blank">
-              私達について</a>
-            
-            <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://mdbootstrap.com/docs/standard/"
-              target="_blank"
-              role="button">
-              Download MDB UI KIT
+  <!-- ============================================================
+       2. クイックリンク
+       ★★★ リンク先を変えたい場合は href を編集してください ★★★
+  ============================================================ -->
+  <div class="d-flex flex-wrap gap-3 mb-4">
+    <a class="quick-link-btn" href="HTML/members.html">
+      <span class="quick-link-btn-icon">👥</span>
+      <span class="quick-link-btn-text">メンバー一覧</span>
+      <span class="quick-link-btn-arrow">→</span>
+    </a>
+    <!-- ★ CONFIG.DISCORD_INVITE で自動設定される -->
+    <a class="quick-link-btn discord-invite-link" href="#">
+      <span class="quick-link-btn-icon">💬</span>
+      <span class="quick-link-btn-text">Discord に参加</span>
+      <span class="quick-link-btn-arrow">→</span>
+    </a>
+    <a class="quick-link-btn" href="HTML/events.html">
+      <span class="quick-link-btn-icon">📅</span>
+      <span class="quick-link-btn-text">イベント一覧</span>
+      <span class="quick-link-btn-arrow">→</span>
+    </a>
+  </div>
+
+  <hr class="divider-accent">
+
+  <!-- ============================================================
+       3. カレンダー・配信（個別ローディング）
+          各パーツが独立してローディング→表示される
+  ============================================================ -->
+  <div class="row g-4 mb-4">
+
+    <!-- Googleカレンダー（小）★ ローディング個別 -->
+    <div class="col-md-6">
+      <div class="section-heading"><h2>📅 直近のイベント</h2></div>
+      <div class="mini-box">
+        <div class="mini-box-head">📅 FC カレンダー</div>
+        <!-- ★ CONFIG.GOOGLE_CAL_SRC を設定すると自動表示 -->
+        <div id="home-cal-embed">
+          <div class="mini-box-ph">
+            <span style="font-size:2rem">📅</span>
+            <span style="color:var(--accent);font-size:0.8rem">
+              カレンダーを設定するには<br>
+              script/main.js の GOOGLE_CAL_SRC を編集
+            </span>
+            <a href="HTML/events.html" class="btn btn-outline-primary btn-sm mt-2">
+              イベントページへ →
             </a>
           </div>
         </div>
       </div>
     </div>
-    <!-- Background image -->
-  </header>
-  <!--Main Navigation-->
 
-  <!--Main layout-->
-  <main class="mt-5">
-    <div class="container">
-      <!--Section: Content-->
-      <section>
-        <div class="row">
-          <div class="col-md-6 gx-5 mb-4">
-            <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
-              <img src="https://mdbootstrap.com/img/new/slides/031.jpg" class="img-fluid" />
-              <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 gx-5 mb-4">
-            <h4><strong>フリーカンパニーとは？</strong></h4>
-            <p class="text-muted">
-              フリーカンパニーとは、同じ意志を持った仲間同士が集まり、協力し何かを達成するために設立するものです
-              大半の場合その実態は、運動部のように厳しいルールや規則がついてまわる可能性が高く
-              参加するのを怖がっているユーザーはかなり多いです。
-            </p>
-            <h4><strong>私達のフリーカンパニーは？</strong></h4>
-            <p class="text-muted">
-              私達のフリーカンパニーは自由主義の上に成り立っています。
-              メンバーがやりたいことを最大限に楽しんでもらうようにフリーカンパニーは努力しています
-              基本的には、行きたいコンテンツがあれば、フリーカンパニーで募集すれば人が集まり一緒に楽しくクリアできる
-              それが目標です
-            </p>
+    <!-- 現在の配信 ★ ローディング個別 -->
+    <div class="col-md-6">
+      <div class="section-heading"><h2>🎮 現在の配信</h2></div>
+      <div class="mini-box">
+        <div class="mini-box-head">
+          <span class="live-dot"></span> LIVE — Twitch / YouTube
+        </div>
+        <!-- ★ CONFIG.TWITCH_CHANNEL を設定すると自動表示 -->
+        <div id="home-twitch-embed">
+          <div class="mini-box-ph">
+            <span style="font-size:2rem">📡</span>
+            <span style="color:var(--accent);font-size:0.8rem">
+              配信を表示するには<br>
+              script/main.js の TWITCH_CHANNEL を編集
+            </span>
+            <a href="HTML/stream.html" class="btn btn-outline-primary btn-sm mt-2">
+              配信ページへ →
+            </a>
           </div>
         </div>
-      </section>
-      <!--Section: Content-->
-
-      <hr class="my-5" />
-
-      <!--Section: Content-->
-      <section class="text-center">
-        <h4 class="mb-5"><strong>Facilis consequatur eligendi</strong></h4>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
-                  class="img-fluid"
-                />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/023.jpg"
-                  class="img-fluid"
-                />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
-                  class="img-fluid"
-                />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#!" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Section: Content-->
-
-      <hr class="my-5" />
-
-      <!--Section: Content-->
-      <section class="mb-5">
-        <h4 class="mb-5 text-center"><strong>Facilis consequatur eligendi</strong></h4>
-
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6">
-            <form>
-              <!-- 2 column grid layout with text inputs for the first and last names -->
-              <div class="row mb-4">
-                <div class="col">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">First name</label>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Last name</label>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control" />
-                <label class="form-label" for="form3Example3">Email address</label>
-              </div>
-
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Password</label>
-              </div>
-
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-center mb-4">
-                <input
-                  class="form-check-input me-2"
-                  type="checkbox"
-                  value=""
-                  id="form2Example3"
-                  checked
-                />
-                <label class="form-check-label" for="form2Example3">
-                  Subscribe to our newsletter
-                </label>
-              </div>
-
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">
-                Sign up
-              </button>
-
-              <!-- Register buttons -->
-              <div class="text-center">
-                <p>or sign up with:</p>
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-google"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-twitter"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-github"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-      <!--Section: Content-->
-    </div>
-  </main>
-  <!--Main layout-->
-
-  <!--Footer-->
-  <footer class="bg-light text-lg-start">
-    <div class="py-4 text-center">
-      <a
-        role="button"
-        class="btn btn-primary btn-lg m-2"
-        href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-        rel="nofollow"
-        target="_blank"
-      >
-        Learn Bootstrap 5
-      </a>
-      <a
-        role="button"
-        class="btn btn-primary btn-lg m-2"
-        href="https://mdbootstrap.com/docs/standard/"
-        target="_blank"
-      >
-        Download MDB UI KIT
-      </a>
+      </div>
     </div>
 
-    <hr class="m-0" />
+  </div>
 
-    <div class="text-center py-4 align-items-center">
-      <p>Follow MDB on social media</p>
-      <a
-        href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-        class="btn btn-primary m-1"
-        role="button"
-        rel="nofollow"
-        target="_blank"
-      >
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a
-        href="https://www.facebook.com/mdbootstrap"
-        class="btn btn-primary m-1"
-        role="button"
-        rel="nofollow"
-        target="_blank"
-      >
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a
-        href="https://twitter.com/MDBootstrap"
-        class="btn btn-primary m-1"
-        role="button"
-        rel="nofollow"
-        target="_blank"
-      >
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a
-        href="https://github.com/mdbootstrap/mdb-ui-kit"
-        class="btn btn-primary m-1"
-        role="button"
-        rel="nofollow"
-        target="_blank"
-      >
-        <i class="fab fa-github"></i>
-      </a>
+  <hr class="divider-accent">
+
+  <!-- ============================================================
+       4. Discord誘導バナー
+       ★★★ テキストを変えたい場合はここを編集してください ★★★
+  ============================================================ -->
+  <div class="discord-cta mb-4">
+    <div class="discord-cta-icon">🎮</div>
+    <div class="discord-cta-text">
+      <h3>FCのDiscordサーバーに参加しよう！</h3>
+      <p>イベント情報・ボイスチャット・攻略情報共有はDiscordで！</p>
+    </div>
+    <a href="#" class="btn-discord-cta discord-invite-link">💬 Discordに参加する →</a>
+  </div>
+
+  <!-- ============================================================
+       5. 直近のイベント
+       ★★★ ここを編集してイベントを追加・変更してください ★★★
+       .home-event-item を増やすと追加できます
+  ============================================================ -->
+  <div class="section-heading"><h2>📅 直近のイベント</h2></div>
+  <div class="mb-4">
+
+    <!-- イベント 1 ★ここを編集★ -->
+    <a class="home-event-item" href="HTML/events.html">
+      <div class="home-event-date">
+        <div class="home-event-date-m">MAY</div>
+        <div class="home-event-date-d">03</div>
+      </div>
+      <div>
+        <div class="home-event-title">極コンテンツ 練習会</div>
+        <div class="home-event-meta">🕘 21:00〜23:00 ・ 参加人数: 8名</div>
+      </div>
+    </a>
+
+    <!-- イベント 2 ★ここを編集★ -->
+    <a class="home-event-item" href="HTML/events.html">
+      <div class="home-event-date">
+        <div class="home-event-date-m">MAY</div>
+        <div class="home-event-date-d">10</div>
+      </div>
+      <div>
+        <div class="home-event-title">FC 週次ギャザクラ会</div>
+        <div class="home-event-meta">🕘 20:00〜22:00 ・ 参加自由</div>
+      </div>
+    </a>
+
+    <!-- イベント 3 ★ここを編集★ -->
+    <a class="home-event-item" href="HTML/events.html">
+      <div class="home-event-date">
+        <div class="home-event-date-m">MAY</div>
+        <div class="home-event-date-d">17</div>
+      </div>
+      <div>
+        <div class="home-event-title">スクリーンショット大会 🎨</div>
+        <div class="home-event-meta">🕘 終日受付</div>
+      </div>
+    </a>
+
+    <a href="HTML/events.html" style="display:block;text-align:center;padding:10px;font-size:0.8rem;color:var(--accent)">
+      すべてのイベントを見る →
+    </a>
+  </div>
+
+  <hr class="divider-accent">
+
+  <!-- ============================================================
+       6. お知らせ
+       ★★★ ここを編集してお知らせを追加・変更してください ★★★
+       .notice-item を増やすと追加できます
+  ============================================================ -->
+  <div class="section-heading"><h2>📢 お知らせ</h2></div>
+  <div class="d-flex flex-column gap-2">
+
+    <!-- お知らせ 1 ★ここを編集★ -->
+    <div class="notice-item">
+      <span class="notice-date">2025.04.20</span>
+      <span class="notice-text">
+        FCサイトをオープンしました！
+        <span class="badge-new ms-2">NEW</span>
+      </span>
     </div>
 
-    
+    <!-- お知らせ 2 ★ここを編集★ -->
+    <div class="notice-item">
+      <span class="notice-date">2025.04.15</span>
+      <span class="notice-text">
+        週次イベント「極コンテンツ練習会」の日程を更新しました
+        <span class="badge-gold ms-2">イベント</span>
+      </span>
+    </div>
 
+    <!-- お知らせ 3 ★ここを編集★ -->
+    <div class="notice-item">
+      <span class="notice-date">2025.04.10</span>
+      <span class="notice-text">FCルールを一部改定しました。必ずご確認ください</span>
+    </div>
 
+    <!-- お知らせ 4 ★ここを編集★ -->
+    <div class="notice-item">
+      <span class="notice-date">2025.04.01</span>
+      <span class="notice-text">新メンバー募集を再開しました。加入希望はDiscordまで</span>
+    </div>
 
+  </div>
 
+</main>
 
-    <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript"></script>
-  </body>
+<footer>
+  <p>© 2025 FC Portal — Final Fantasy XIV Free Company Site</p>
+  <p>FINAL FANTASY XIV © 2010-2025 SQUARE ENIX CO., LTD. All Rights Reserved.</p>
+</footer>
+
+<!-- MDB JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+<script src="script/main.js"></script>
+<script src="script/lodestone.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // ---- FCトップ取得（コンテンツ内プログレスバーで表示） ----
+    loadFCTop('home-hero-wrap');
+
+    // ---- Googleカレンダー（小）注入 ----
+    // ★ CONFIG.GOOGLE_CAL_SRC が設定されると自動表示
+    injectEmbed(
+      'home-cal-embed',
+      CONFIG.GOOGLE_CAL_SRC
+        ? CONFIG.GOOGLE_CAL_SRC + '&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0&mode=AGENDA&height=240'
+        : '',
+      240,
+      document.getElementById('home-cal-embed').innerHTML
+    );
+
+    // ---- Twitch配信（小）注入 ----
+    // ★ CONFIG.TWITCH_CHANNEL が設定されると自動表示
+    const parent = encodeURIComponent(location.hostname || 'localhost');
+    injectEmbed(
+      'home-twitch-embed',
+      CONFIG.TWITCH_CHANNEL
+        ? `https://player.twitch.tv/?channel=${CONFIG.TWITCH_CHANNEL}&parent=${parent}&muted=true`
+        : '',
+      240,
+      document.getElementById('home-twitch-embed').innerHTML
+    );
+
+  });
+</script>
+
+</body>
 </html>

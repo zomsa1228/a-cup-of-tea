@@ -1,0 +1,73 @@
+/* ============================================================
+   admin.css
+   役割: 管理画面（admin/index.html）専用スタイル
+   依存: ../css/main.css
+============================================================ */
+
+.admin-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+.admin-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.required { color: var(--danger); font-size: 0.8rem; }
+
+/* 画像プレビュー */
+.img-preview-wrap {
+  width: 100%; height: 80px;
+  background: var(--bg-sub); border: 1px solid var(--border);
+  border-radius: 8px; display: flex; align-items: center;
+  justify-content: center; overflow: hidden;
+}
+.img-preview-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+/* 追加済みカードの削除ボタン */
+.list-card-wrap { position: relative; }
+.list-card-delete {
+  position: absolute; top: 6px; right: 6px; z-index: 10;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(249,49,84,0.8); border: none;
+  color: #fff; font-size: 12px; display: flex;
+  align-items: center; justify-content: center;
+  cursor: pointer; transition: background 0.15s; padding: 0;
+}
+.list-card-delete:hover { background: var(--danger); }
+
+/* JSONプレビュー */
+#json-preview {
+  font-size: 0.78rem; line-height: 1.5;
+  color: var(--accent); background: var(--bg-sub);
+  border-color: var(--border); resize: vertical;
+}
+
+/* OGP取得中スピナー */
+.ogp-loading {
+  display: inline-block; width: 14px; height: 14px;
+  border: 2px solid rgba(18,102,241,0.3);
+  border-top-color: var(--accent); border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle; margin-right: 6px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* トースト通知 */
+.admin-toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+  padding: 10px 20px;
+  background: rgba(18,102,241,0.12);
+  border: 1px solid var(--border-accent);
+  border-radius: 8px; color: var(--accent);
+  font-size: 0.85rem; box-shadow: var(--shadow);
+  animation: toastIn 0.2s ease, toastOut 0.3s ease 1.8s forwards;
+}
+@keyframes toastIn  { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+@keyframes toastOut { from { opacity:1; } to { opacity:0; } }
