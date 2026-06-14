@@ -34,13 +34,6 @@ fc-site/
 ├── asset/
 │   └── image/              ← 画像置き場
 │
-├── admin/                  ← JSON生成管理画面
-│   ├── index.html          ← 管理画面メイン
-│   ├── css/
-│   │   └── admin.css       ← 管理画面専用スタイル
-│   └── script/
-│       └── admin.js        ← 管理画面ロジック
-│
 └── data/
     ├── links.json          ← リンク集カードデータ
     └── memo.json           ← 攻略メモカードデータ
