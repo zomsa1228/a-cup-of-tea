@@ -14,6 +14,7 @@
 // ============================================================
 // サイト設定
 // ★★★ ここを編集してください ★★★
+// 
 // ============================================================
 const CONFIG = {
   FC_ID: "9227453424017171422",
@@ -22,16 +23,16 @@ const CONFIG = {
   GOOGLE_CAL_SRC: "",
 
   // ★ Discord招待リンク
-  DISCORD_INVITE: "https://discord.gg/XXXXX",
+  DISCORD_INVITE: "https://discord.gg/xHz5XmEVud",
 
   // ★ DiscordウィジェットのサーバーID
-  DISCORD_SERVER_ID: "",
+  DISCORD_SERVER_ID: "613638497370243072",
 
   // ★ Twitchチャンネル名（https://twitch.tv/xxxx の xxxx 部分）
-  TWITCH_CHANNEL: "",
+  TWITCH_CHANNEL: "roimy_zomsa",
 
   // ★ YouTubeチャンネルID
-  YOUTUBE_CHANNEL_ID: "",
+  YOUTUBE_CHANNEL_ID: "UC1SAjLgXuVuH94nDoZAnXIA",
 };
 
 // ============================================================
